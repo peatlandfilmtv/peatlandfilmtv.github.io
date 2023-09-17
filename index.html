@@ -18,25 +18,29 @@
     }
 
     body {
-      background-color: black;
+      background: url("./Tausta.jpg") no-repeat;
+      background-size: contain;
+      background-size: cover;
+      background-position: inherit;
+      background-position-y: -10vh;
+      overflow-x: clip;
     }
 
     .background {
-      background: url("./Tausta.jpg") no-repeat;
-      background-size: contain;
-      background-position: center center;
       display: flex;
       justify-content: center;
       flex-direction: column;
     }
 
     .content {
-      height: min-content;
-      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     .spacer {
-      margin-top: 35%;
+      margin-top: 40vh;
     }
 
     p,
@@ -59,42 +63,19 @@
 
     iframe {
       width: 90vw;
-      height: 30vh;
+      height: 70vh;
     }
 
-    object {
-      height: 100vh;
+    .synopsis {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
     }
 
-    @media (min-width: 1401px) {
-      .background {
-        background-size: cover;
-      }
-    }
-
-    @media (min-width: 1501px) {
-      .background {
-        margin-top: -25vh
-      }
-    }
-
-    @media (max-width: 1500px) {
-      .background {
-        margin-top: -10vh
-      }
-    }
-
-    @media (max-width: 800px) {
-      .background {
-        margin-top: -20vh;
-      }
-
-      .spacer {
-        margin-top: 50%;
-      }
-
-      .synopsis {
-        margin: 5vh auto;
+    @media (min-width: 2500px) {
+      body {
+        background-position-y: -25vh;
       }
     }
   </style>
@@ -106,7 +87,7 @@
     <div class="content">
       <div class="synopsis" style="height: auto;">
         <h2>Synopsis</h2>
-        <iframe style="height: 60vh;" src="./Sekametelisoppa.pdf#view=FitH" width="100%"></embed>
+        <iframe style="height: 60vh;" src="./Sekametelisoppa.pdf#view=FitH" width="100%"></iframe>
       </div>
       <h2>Traileri</h2>
       <iframe width="100vw" height="auto" src="https://www.youtube.com/embed/mh-VUDfWDTw?si=SfbM04_TuzsWCMru"
@@ -118,6 +99,9 @@
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
+      <div>
+        <img src="takapuoli-2.jpg" />
+      </div>
     </div>
   </div>
 </body>
