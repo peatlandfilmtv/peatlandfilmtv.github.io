@@ -22,10 +22,9 @@
     }
 
     .background {
-      background: url("./Tausta.jpg");
-      background-repeat: no-repeat;
+      background: url("./Tausta.jpg") no-repeat;
       background-size: contain;
-
+      background-position: center center;
       display: flex;
       justify-content: center;
       flex-direction: column;
@@ -37,7 +36,7 @@
     }
 
     .spacer {
-      margin-top: 25%;
+      margin-top: 35%;
     }
 
     p,
@@ -87,11 +86,14 @@
 
     @media (max-width: 800px) {
       .background {
-        margin-top: -5vh
+        margin-top: -20vh;
       }
 
-      p {
-        width: 80vw;
+      .spacer {
+        margin-top: 50%;
+      }
+
+      .synopsis {
         margin: 5vh auto;
       }
     }
@@ -102,15 +104,9 @@
   <div class="background">
     <div class="spacer"></div>
     <div class="content">
-      <p>
-        Koko perheen joulukalenteri
-        <br>
-        Salaisen tonttulaakson Sekametelisoppa on tarina karjalaisista tontuista,
-        jotka asuvat keskellä Pohjois-Karjalan vaaroja
-      </p>
-      <div style="height: auto;">
-        <h2>SYNOPSIS</h2>
-        <embed type="application/pdf" style="height: 60vh;" src="./Sekametelisoppa.pdf#view=FitH" width="100%"></embed>
+      <div class="synopsis" style="height: auto;">
+        <h2>Synopsis</h2>
+        <iframe style="height: 60vh;" src="./Sekametelisoppa.pdf#view=FitH" width="100%"></embed>
       </div>
       <h2>Traileri</h2>
       <iframe width="100vw" height="auto" src="https://www.youtube.com/embed/mh-VUDfWDTw?si=SfbM04_TuzsWCMru"
