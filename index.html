@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sekametelisoppa</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    @font-face {
+      font-family: "PerryGothic";
+      src: url(./PerrygothicRegular-Yzd8.ttf) format("truetype");
+    }
+
+    body {
+      background-color: black;
+    }
+
+    .background {
+      background: url("./Tausta.jpg");
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .content {
+      height: min-content;
+      padding: 2rem;
+    }
+
+    .spacer {
+      margin-top: 25%;
+    }
+
+    p,
+    h2 {
+      color: #c5ac63;
+      font-family: 'PerryGothic';
+    }
+
+    p {
+      font-size: 1rem;
+      width: 50vw;
+      margin: 15vh auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 3rem;
+      margin: 1rem 0 0.5rem 0;
+    }
+
+    iframe {
+      width: 90vw;
+      height: 30vh;
+    }
+
+    object {
+      height: 100vh;
+    }
+
+    @media (min-width: 1401px) {
+      .background {
+        background-size: cover;
+      }
+    }
+
+    @media (min-width: 1501px) {
+      .background {
+        margin-top: -25vh
+      }
+    }
+
+    @media (max-width: 1500px) {
+      .background {
+        margin-top: -10vh
+      }
+    }
+
+    @media (max-width: 800px) {
+      .background {
+        margin-top: -5vh
+      }
+
+      p {
+        width: 80vw;
+        margin: 5vh auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background">
+    <div class="spacer"></div>
+    <div class="content">
+      <p>
+        Koko perheen joulukalenteri
+        <br>
+        Salaisen tonttulaakson Sekametelisoppa on tarina karjalaisista tontuista,
+        jotka asuvat keskellä Pohjois-Karjalan vaaroja
+      </p>
+      <h2>Traileri</h2>
+      <iframe width="100vw" height="auto" src="https://www.youtube.com/embed/mh-VUDfWDTw?si=SfbM04_TuzsWCMru"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+      <h2>1. Luukku</h2>
+      <iframe width="100vw" height="auto" src="https://www.youtube.com/embed/mh-VUDfWDTw?si=SfbM04_TuzsWCMru"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+      <h2>Joku otsikko</h2>
+      <div>
+        <object data="./Sekametelisoppa.pdf" width="100%">
+          <p>Tiedoston esitys ei onnistunut
+            <a href="./Sekametelisoppa.pdf">Lataa tästä</a> sen sijaan.
+          </p>
+        </object>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
