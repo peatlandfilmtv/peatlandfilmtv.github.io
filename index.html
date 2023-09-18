@@ -22,16 +22,18 @@
 
     body {
       overflow-x: clip;
-      background: url("./Tausta.jpg") no-repeat;
-      background-size: cover;
-      background-position: inherit;
-      background-position-y: -10vh;
+      background-color: black;
     }
 
     .background {
       display: flex;
       justify-content: center;
       flex-direction: column;
+
+      background: url("./Tausta.jpg") no-repeat;
+      background-size: cover;
+      background-position: inherit;
+      background-position-y: -10vh;
     }
 
     .content {
@@ -89,7 +91,7 @@
     }
 
     @media (max-width: 1500px) {
-      body {
+      .background {
         background-size: contain;
       }
     }
@@ -107,13 +109,13 @@
     }
 
     @media (max-width: 610px) {
-      body {
+      .background {
         background-position-y: initial;
       }
     }
 
     @media (min-width: 1600px) {
-      body {
+      .background {
         background-position-y: -25vh;
       }
     }
@@ -125,7 +127,7 @@
     }
 
     @media (min-width: 2200px) {
-      body {
+      .background {
         background-position-y: -30vh;
       }
     }
