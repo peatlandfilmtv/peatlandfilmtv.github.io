@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sekametelisoppa</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+    integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
   <style>
     * {
       box-sizing: border-box;
@@ -18,12 +21,11 @@
     }
 
     body {
+      overflow-x: clip;
       background: url("./Tausta.jpg") no-repeat;
-      background-size: contain;
       background-size: cover;
       background-position: inherit;
       background-position-y: -10vh;
-      overflow-x: clip;
     }
 
     .background {
@@ -73,13 +75,58 @@
       align-items: center;
     }
 
-    #pdfAndroid {
+    #pdfAndroid,
+    #pdf {
       display: none;
     }
 
-    @media (min-width: 2500px) {
+    #pdfAndroid img {
+      width: 90vw;
+    }
+
+    .businessCard img {
+      max-width: 100vw;
+    }
+
+    @media (max-width: 1500px) {
+      body {
+        background-size: contain;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      .spacer {
+        margin-top: 30vh;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .spacer {
+        margin-top: 20vh;
+      }
+    }
+
+    @media (max-width: 610px) {
+      body {
+        background-position-y: initial;
+      }
+    }
+
+    @media (min-width: 1600px) {
       body {
         background-position-y: -25vh;
+      }
+    }
+
+    @media (min-width: 2000px) {
+      .spacer {
+        margin-top: 50vh;
+      }
+    }
+
+    @media (min-width: 2200px) {
+      body {
+        background-position-y: -30vh;
       }
     }
   </style>
@@ -91,8 +138,14 @@
     <div class="content">
       <div class="synopsis" style="height: auto;">
         <h2>Synopsis</h2>
-        <iframe style="height: 60vh;" frameborder="0"
-          src="https://kisofilms.fi/wp-content/uploads/2023/09/Sekametelisoppa.pdf" width="100%"></iframe>
+        <div id="pdf">
+          <iframe style="height: 60vh;" frameborder="0"
+            src="https://kisofilms.fi/wp-content/uploads/2023/09/Sekametelisoppa.pdf" width="100%"></iframe>
+        </div>
+        <div id="pdfAndroid">
+          <a target="_blank" href="https://kisofilms.fi/wp-content/uploads/2023/09/Sekametelisoppa.pdf"><img
+              src="lataa_pdf.jpg" /></a>
+        </div>
       </div>
       <h2>Traileri</h2>
       <iframe width="100vw" height="auto" src="https://www.youtube.com/embed/mh-VUDfWDTw?si=SfbM04_TuzsWCMru"
@@ -104,7 +157,7 @@
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
-      <div>
+      <div class="businessCard">
         <img src="takapuoli-2.jpg" />
       </div>
     </div>
